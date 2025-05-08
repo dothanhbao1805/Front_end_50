@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #FFCB43;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  max-width: 800px;
+}
+
+.cau {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  color:white;
+}
+
+.tacGia {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-align: right;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .cau {
+    font-size: 16px;
+  }
+
+  .tacGia {
+    font-size: 14px;
+    text-align: center;
+  }
+}

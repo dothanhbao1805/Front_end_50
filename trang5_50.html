@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang 5_50</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/trang5_50.css"/>
+</head>
+<body>
+  <!-- Final Message -->
+  <div class="message fade" id="finalMessage">
+    <p id="textContent"></p>
+    <div class="btn-container right-align">
+      <button class="exploreBtn" id="continueBtn" style="display: none;">Tiếp tục</button>
+    </div>
+  </div>
+
+  <!-- Transition Text -->
+  <p id="transitionText" class="transition-text" style="display: none;">
+    Sau đây là lời chia sẻ đầy xúc động của một nhân chứng sống trong chiến dịch lịch sử – Trung úy Quách Minh Sơn…
+  </p>
+
+  <!-- Video Section -->
+  <div class="body fade" id="videoSection" style="display: none;">
+    <div class="video-wrapper">
+      <video class="media" id="myVideo" src="images/trang5_50/tudo.mp4" type="video/mp4" controls></video>
+    </div>
+    <p class="video-caption">
+      Những chia sẻ xúc động của Trung úy Quách Minh Sơn - Nguyên Trinh sát Sư đoàn 320 trong cuộc giải phóng miền Nam 1975
+    </p>
+  </div>
+
+  <script>
+    const finalMessage = document.getElementById('finalMessage');
+    const videoSection = document.getElementById('videoSection');
+    const continueBtn = document.getElementById('continueBtn');
+    const myVideo = document.getElementById('myVideo');
+    const textContent = document.getElementById('textContent');
+    const transitionText = document.getElementById('transitionText');
+
+    const message = "Bằng tinh thần độc lập, yêu nước mãnh liệt, cha ông ta đã đánh bại những khó khăn, gian khó để ta được sống trong một đất nước hòa bình, tự do như hôm nay. Ta phải biết ơn, trân trọng những gì mà cha ông ta để lại, đồng thời có trách nhiệm giữ gìn, phát huy truyền thống quý báu, đoàn kết xây dựng đất nước ngày càng giàu mạnh, văn minh.";
+
+    let index = 0;
+    function typeWriter() {
+      if (index < message.length) {
+        textContent.innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      } else {
+        // Sau khi hiện xong toàn bộ message thì mới hiện nút Tiếp tục
+        document.getElementById('continueBtn').style.display = 'inline-block';
+      }
+    }
+    typeWriter();
+
+    continueBtn.addEventListener('click', () => {
+      finalMessage.classList.add('fade-out');
+
+      setTimeout(() => {
+        finalMessage.style.display = 'none';
+        transitionText.style.display = 'block';
+        transitionText.classList.add('fade-in');
+
+        setTimeout(() => {
+          transitionText.classList.remove('fade-in');
+          transitionText.style.display = 'none';
+          videoSection.style.display = 'block';
+          videoSection.classList.add('fade-in');
+          myVideo.play();
+        }, 3000);
+      }, 800);
+    });
+
+    myVideo.addEventListener('ended', () => {
+      const afterMessage = document.createElement('p');
+      afterMessage.classList.add('transition-text', 'fade-in');
+      afterMessage.innerText = 'Hành trình lịch sử ấy không khép lại, mà chính là nền tảng để thế hệ hôm nay tiếp bước, giữ gìn hòa bình và xây dựng tương lai tươi sáng hơn...';
+      videoSection.appendChild(afterMessage);
+
+      setTimeout(() => {
+        const continueButton = document.createElement('button');
+        continueButton.classList.add('exploreBtn');
+        continueButton.innerText = 'Tiếp tục';
+
+        const btnContainer = document.createElement('div');
+        btnContainer.classList.add('btn-container', 'right-align');
+        btnContainer.appendChild(continueButton);
+        videoSection.appendChild(btnContainer);
+
+        continueButton.addEventListener('click', () => {
+          videoSection.classList.remove('fade-in');
+          videoSection.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = 'trang6_50.html';
+          }, 800);
+        });
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #950006;
+    color: #fff;
+    font-size: 15px; /* cỡ chữ cơ bản đồng đều */
+  }
+  
+  .body {
+    padding: 24px;
+    max-width: 960px; /* thu hẹp một chút để gọn hơn */
+    margin: auto;
+  }
+  
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', serif;
+    color: #950006;
+  }
+  
+  .post-container {
+    background-color: #fffdf2;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    margin-bottom: 36px;
+    color: #950006;
+    line-height: 1.65;
+  }
+  
+  .post-container p {
+    font-size: 15px;
+    color: #950006;
+    margin-bottom: 12px;
+  }
+  
+  .tieuDe {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #ffd54f;
+  }
+  
+  .so {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff9c4;
+  }
+  
+  .chapter-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+  }
+  
+  .chapter {
+    width: 120px;
+    height: 120px;
+    background: #888;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .chapter span {
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  
+  .chapter.current {
+    background: #ffeb3b;
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  .chapter:hover {
+    transform: scale(1.07);
+  }
+  
+  .image {
+    margin: 25px auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .image img {
+    max-width: 80%; /* ảnh nhỏ hơn chút */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+  
+  .image p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #5d2b1a; 
+    font-style: italic;
+  }
+  
+  .btn-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button {
+    padding: 10px 22px;
+    font-size: 14px;
+    background-color: #ffeb3b;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #fdd835;
+    transform: scale(1.05);
+  }
+  
+  /* Văn bản chung */
+  .text,
+  .body > p {
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 14px;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .body {
+      padding: 16px;
+    }
+  
+    .chapter {
+      width: 90px;
+      height: 90px;
+      font-size: 11px;
+    }
+  
+    .chapter span {
+      font-size: 9px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .tieuDe {
+      font-size: 16px;
+    }
+  
+    .so {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 13px;
+      padding: 8px 16px;
+    }
+  
+    .image img {
+      max-width: 95%; /* rộng hơn chút trên mobile */
+    }
+  }
+  

@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #950006;
+  color: white;
+}
+
+/* Header nền vàng + hoa văn */
+.header {
+  background-color: #FFD700;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+.logo2{
+  width: 150px;
+  height: auto;
+}
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cau {
+  font-size: 28px;
+  font-weight: 700;
+  color: #950006;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.slogan {
+  font-size: 20px;
+  font-weight: 700;
+  color: #950006;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.subline {
+  font-size: 16px;
+  font-style: italic;
+  color: #550000;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Badge góc phải */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  background-color: #950006;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #fff;
+}
+
+/* Hiệu ứng mờ dần */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .cau {
+    font-size: 20px;
+  }
+
+  .slogan {
+    font-size: 16px;
+  }
+
+  .subline {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}

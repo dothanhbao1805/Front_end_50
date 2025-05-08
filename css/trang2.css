@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #950006;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* Chapter Navigation */
+.chapter-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.chapter {
+  width: 120px;
+  height: 120px;
+  background: #888;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.chapter span {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.chapter.current {
+  background: #ffeb3b;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.chapter:hover {
+  transform: scale(1.07);
+}
+
+/* Section Title */
+.section-heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffeb3b, #ffc107);
+  color: #000;
+  padding: 15px;
+  margin: 40px 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Year Selector */
+.year-selector {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.year-selector label {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.year-selector input[type="radio"] {
+  display: none;
+}
+
+.year-selector span {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ccc;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.year-selector input[type="radio"]:checked + span {
+  background: #ffeb3b;
+  transform: scale(1.05);
+}
+/* Wrapper cho các card */
+.wrapper {
+  display: flex;
+  justify-content: space-between; /* Tách các card ra đều */
+  gap: 20px; /* Khoảng cách giữa các card */
+  flex-wrap: wrap; /* Cho phép các card xuống dòng khi không đủ không gian */
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* Cards */
+.card {
+  background: linear-gradient(145deg, #a00000, #7a0000);
+  color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s;
+  display: inline-block; 
+  vertical-align: top;
+  width: calc(33% - 40px);
+  box-sizing: border-box;
+  border: 2px solid #F8FFBB;
+  overflow: hidden; /* Ngăn nội dung tràn ra ngoài */
+  position: relative; /* Để sử dụng z-index nếu cần */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+.card-title {
+  font-size: 20px;
+  height: auto; /* Không ép chiều cao nếu không cần */
+  min-height: 60px; /* Đảm bảo có khoảng hiển thị tiêu đề */
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  color: #ffeb3b;
+  z-index: 2;
+  position: relative;
+}
+
+
+
+.btn {
+  padding: 12px 20px;
+  background: #ffeb3b;
+  color: #950006;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffe000;
+  transform: scale(1.05);
+}
+
+
+/* Modal */
+.modal {
+  display: none; /* Ẩn mặc định */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* overlay mờ */
+}
+
+.modal-box {
+  background: #f9f4ef;
+  color: #333;
+  margin: 5% auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  position: relative;
+  z-index: 1001;
+  animation: scaleUp 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.modal-title {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  text-align: center;
+  color: #950006;
+  margin-bottom: 20px;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #950006;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #c00000;
+  transform: scale(1.1);
+}
+/* Nút chuyển trang */
+.btn-container {
+  margin: 40px 40px 40px 0; 
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ffeb3b;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #fdd835;
+  transform: scale(1.05);
+}
+
+.modal-image {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #950006;
+}
+
+.modal-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #222;
+}
+.text{
+  text-align: center;
+  color: #5B6364;
+}
+/* Animations */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    width: calc(33% - 40px); /* 3 thẻ trên cùng một hàng trên các màn hình lớn */
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: calc(50% - 40px); /* 2 thẻ trên cùng một hàng trên màn hình nhỏ */
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px); /* 1 thẻ trên mỗi hàng trên các màn hình nhỏ nhất */
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/trang4.css" />
+</head>
+<body>
+  <div class="chapter-title">
+    <p class="title">Chương 4</p>
+    <p class="title">Tiếp bước Người - Hướng đến tương lai</p>
+  </div>
+
+  <div class="text-section fade-in" id="text-section">
+    <p class="text">
+      Chủ tịch Hồ Chí Minh – Người sáng lập, rèn luyện và dẫn dắt Đảng Cộng sản Việt Nam – đã dành trọn cuộc đời mình để gây dựng một tổ chức cách mạng chân chính, vì nhân dân mà phục vụ. 
+      Từ những ngày đầu đầy gian nan, Bác đã kiên trì vun đắp cho một Đảng vững về tư tưởng, mạnh về tổ chức, trong sạch về đạo đức. 
+      Chính từ nền móng ấy, Đảng ta đã lãnh đạo cách mạng đi từ thắng lợi này đến thắng lợi khác, giành độc lập dân tộc, xây dựng đất nước hòa bình, phát triển. 
+      Hôm nay, hơn bao giờ hết, thế hệ chúng ta phải biết trân trọng và giữ gìn thành quả ấy, không ngừng bồi đắp lý tưởng cách mạng, nâng cao năng lực và đạo đức cách mạng để tiếp nối con đường mà Bác và các thế hệ cha ông đã lựa chọn.
+    </p>
+    <button class="continue-btn fade-in" id="continue-btn">Tiếp tục</button>
+  </div>
+
+  <div class="transition-wrapper" id="transition-wrapper">
+    <p class="transition-text" id="transition-text">
+      Tiêu biểu là Tổng Bí thư Nguyễn Phú Trọng – người kế thừa và lan tỏa tư tưởng, đạo đức, phong cách Hồ Chí Minh – là minh chứng cho lý tưởng cách mạng luôn được tiếp nối và phát huy trong thời đại mới.
+    </p>
+
+    <div class="video-wrapper">
+      <video class="media" controls id="main-video">
+        <source src="images/trang4/Tổng Bí thư Nguyễn Phú Trọng.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    </div>
+
+    <div class="inspirational-text fade-in" id="inspirational-text" style="display: none;">
+      <p class="quote">
+        "Nếu là hoa hãy là hoa hướng dương; nếu là chim hãy là chim câu trắng; nếu là đá hãy là đá kim cương; nếu là người hãy là người Cộng Sản!"<br /><br />
+        Cái quý nhất của con người là cuộc sống và danh dự sống, bởi vì đời người chỉ sống có một lần. Phải sống sao cho khỏi xót xa ân hận vì những năm tháng đã sống hoài, sống phí; để khỏi hổ thẹn vì những việc làm ty tiện, đớn hèn, bị mọi người khinh bỉ; để đến khi nhắm mắt xuôi tay ta có thể tự hào rằng: Tất cả đời ta, tất cả sức ta, ta đã hiến dâng cho sự nghiệp cao đẹp nhất trên đời - sự nghiệp đấu tranh giải phóng dân tộc, giải phóng con người mang lại hạnh phúc cho nhân dân!
+      </p>
+      <p class="quote-author">— Tổng Bí thư Nguyễn Phú Trọng</p>
+    </div>
+
+    <a href="trang5.html">
+      <button class="continue-btn fade-in" id="after-video-btn">Tiếp tục</button>
+    </a>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.getElementById("text-section").classList.add("show");
+      }, 500);
+    });
+
+    document.getElementById("continue-btn").addEventListener("click", () => {
+      document.getElementById("text-section").style.display = "none";
+      const transitionWrapper = document.getElementById("transition-wrapper");
+      transitionWrapper.style.display = "flex";
+      setTimeout(() => {
+        transitionWrapper.classList.add("show");
+        const video = document.getElementById("main-video");
+        video.play().catch(err => console.warn("Không thể tự phát video:", err));
+      }, 300);
+    });
+
+    document.getElementById("main-video").addEventListener("ended", () => {
+    const videoWrapper = document.querySelector(".video-wrapper");
+    const transitionText = document.querySelector(".transition-text");
+
+    // Ẩn video và đoạn giới thiệu
+    videoWrapper.style.display = "none";
+    transitionText.style.display = "none";
+
+    // Hiện đoạn trích truyền cảm hứng
+    const inspirationalText = document.getElementById("inspirational-text");
+    inspirationalText.style.display = "block";
+    setTimeout(() => {
+      inspirationalText.classList.add("show");
+    }, 100);
+
+    // Hiện nút tiếp tục
+    const btn = document.getElementById("after-video-btn");
+    btn.classList.add("show");
+  });
+
+  </script>
+</body>
+</html>

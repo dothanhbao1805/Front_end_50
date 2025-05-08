@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang 6_50</title>
+  <link rel="stylesheet" href="css/trang5.css" />
+</head>
+<body>
+  <!-- Tự động phát âm thanh -->
+  <audio id="bgAudio" src="images/trang5/nhac.m4a" autoplay loop hidden></audio>
+
+  <!-- Phần hiển thị hình ảnh -->
+  <div class="gallery" id="gallery">
+    <img src="images/trang5/1.jpg" class="gallery-img" />
+    <img src="images/trang5/2.jpg" class="gallery-img" />
+    <img src="images/trang5/3.jpg" class="gallery-img" />
+    <img src="images/trang5/4.jpg" class="gallery-img" />
+    <img src="images/trang5/5.jpg" class="gallery-img" />
+    <img src="images/trang5/6.jpg" class="gallery-img" />
+    <img src="images/trang5/7.jpg" class="gallery-img" />
+    <img src="images/trang5/8.jpg" class="gallery-img" />
+    <img src="images/trang5/9.jpg" class="gallery-img" />
+    <img src="images/trang5/10.jpg" class="gallery-img" />
+  </div>
+
+  <!-- Phần hiển thị thông điệp + nút kết thúc gộp chung -->
+  <div class="gratitude-container" id="gratitudeContainer">
+    <div class="gratitude-message" id="message">
+      <p>Thế hệ trẻ chúng con luôn biết ơn và trân trọng những gì Bác đã để lại.
+        Chúng con biết rằng độc lập, tự do hôm nay là bao nhiêu mồ hôi, sương máu của Bác cùng các thế hệ cha ông.
+        Chúng con sẽ luôn học tập và làm theo tư tưởng đạo đức của Bác. Chúng con sẽ không ngừng học hỏi, rèn luyện và cống hiến để xây dựng một đất nước Việt Nam ngày càng giàu đẹp, văn minh hơn.
+      </p>
+    </div>
+
+    <!-- Nút kết thúc nằm ngay bên dưới thông điệp -->
+    <div id="endButtonContainer">
+      <a href="start.html"><button id="endButton">Kết thúc hành trình!</button></a>
+    </div>
+  </div>
+
+<script>
+  const images = document.querySelectorAll('.gallery-img');
+  images.forEach((img, index) => {
+    setTimeout(() => {
+      img.classList.add('show');
+    }, index * 1500); // 1.5s mỗi ảnh, thay vì 1s như trước
+  });
+
+  // Phát nhạc (bắt lỗi autoplay)
+  window.addEventListener("load", () => {
+    const audio = document.getElementById("bgAudio");
+    audio.play().catch(e => console.log("Tự động phát bị chặn:", e));
+  });
+
+  // Sau khi ảnh hiển thị xong + 5s thì hiện thông điệp
+  const totalDelay = images.length * 1500 + 5000;
+  setTimeout(() => {
+    document.getElementById("gallery").classList.add("blur");
+    
+    // Sau khi ảnh mờ hết => Hiển thị thông điệp sau 3 giây
+    setTimeout(() => {
+      const container = document.getElementById("gratitudeContainer");
+      container.classList.add("fade-in");
+      
+      // Hiển thị nút kết thúc sau 3s thay vì 5s
+      setTimeout(() => {
+        document.getElementById("endButtonContainer").style.opacity = 1; // Hiển thị nút kết thúc
+      }, 3000); // Nút kết thúc sẽ hiện sau khi thông điệp hiện 3 giây
+    }, 3000); // Hiển thị sau 3 giây từ khi ảnh mờ đi
+  }, totalDelay);
+</script>
+</body>
+</html>

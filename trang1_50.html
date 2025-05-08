@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang 1_50</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/trang1_50.css">
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <div class="body">
+
+    <div class="chapter-nav">
+      <div class="chapter current">Chương 1<br><span>Dấu ấn lịch sử 30/04/1975</span></div>
+      <div class="chapter">Chương 2<br><span>Lễ kỷ niệm 50 năm 30/04/2025</span></div>
+      <div class="chapter">Chương 3<br><span>Chuỗi hoạt động chào mừng</span></div>
+      <div class="chapter">Chương 4<br><span>Cảm nhận và hồi ức</span></div>
+    </div>    
+  
+    <p class="text">Ký ức về chiến dịch HỒ CHÍ MINH</p>
+
+    <div class="video">
+      <video class="media" src="images/video_chienDich.mp4" type="video/mp4" controls></video>
+      <img class="media" src="images/trangChu/menu.jpg" alt="Ảnh minh họa">
+    </div>
+
+    <p class="section-title">Các hình ảnh về chiến dịch 30/4 - Ngày giải phóng miền Nam, thống nhất đất nước</p>
+
+    <div class="gallery">
+      <figure>
+        <img class="anh" src="images/trangChu/chien_dich_ho_chi_minh_lich_2-1.jpg" alt="Chiến dịch Hồ Chí Minh">
+        <figcaption>Đại tướng Võ Nguyên Giáp cùng các đồng chí trong Quân ủy Trung ương duyệt phương án tác chiến Chiến dịch Hồ Chí Minh (Hà Nội, 4-1975). Ảnh: TTXVN</figcaption>
+      </figure>
+
+      <figure>
+        <img class="anh" src="images/trangChu/chiendichhochiminh1.jpg" alt="Chiến dịch Hồ Chí Minh 2">
+        <figcaption>
+          Ảnh 1: Xe tăng của Quân đoàn 1 vượt sông, chuẩn bị tham gia Chiến dịch Hồ Chí Minh, ngày 2-4-1975.<br>
+          Ảnh 2: Lực lượng thọc sâu của Quân đoàn 1 vượt đường 16 tiến vào giải phóng Sài Gòn.<br>
+          Ảnh 3: Quân Giải phóng chuẩn bị lực lượng trước giờ tổng công kích vào Sài Gòn – Gia Định với tinh thần “Thần tốc, táo bạo, bất ngờ, chắc thắng” (26-4-1975).
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img class="anh" src="images/trangChu/khoi-10.jpg" alt="Tân Sơn Nhất">
+        <figcaption>Bộ đội Quân đoàn 3 đánh chiếm sân bay Tân Sơn Nhất. Ảnh: Tư liệu/TTXVN</figcaption>
+      </figure>
+
+      <figure>
+        <img class="anh" src="images/trangChu/khoi4.jpg" alt="Nhân dân Sài Gòn 30-4">
+        <figcaption>
+          Ảnh trái: Nhân dân Sài Gòn đổ ra đường đón chào quân giải phóng chiếm phủ Tổng thống ngụy, trưa 30-4-1975. Ảnh: Tư liệu/TTXVN<br>
+          Ảnh phải: Nhân dân Sài Gòn ra đường đón chào quân Giải phóng, ngày 30-4-1975. Ảnh: TTXVN
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="btn-container right-align">
+      <a href="trang2_50.html"><button class="exploreBtn">Tiếp tục</button></a>
+    </div>    
+  </div>
+
+  <script>
+    fetch('components/header_50.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

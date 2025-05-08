@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #950006;
+    color: #fff;
+  }
+  
+  .body {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }body {
+    margin: 0;
+    background-color: #950006;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+    transition: opacity 2s ease;
+    z-index: 1;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .gallery-img.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Làm mờ ảnh nhưng vẫn giữ lại trên màn hình */
+  .gallery.blur {
+    opacity: 0.2;
+    filter: blur(2px);
+  }
+  
+  /* Container bao toàn bộ thông điệp + nút */
+  .gratitude-container {
+    position: absolute;
+    top: 40%; /* Điều chỉnh lại vị trí của container */
+    left: 50%;
+    transform: translate(-50%, -40%); /* Đẩy container lên gần giữa */
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s ease, visibility 2s ease;
+  }
+  
+  .gratitude-container.fade-in {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .gratitude-message {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px; /* Giữ khoảng cách với nút kết thúc */
+  }
+  
+  /* Nút kết thúc */
+  #endButtonContainer {
+    position: absolute;
+    bottom: 20px; /* Đặt vị trí của nút cách dưới cùng 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Nút ẩn khi chưa đến thời gian */
+    transition: opacity 2s ease; /* Hiệu ứng hiện dần */
+    z-index: 2;
+  }
+  
+  #endButton {
+    background-color: yellow;
+    color: black;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

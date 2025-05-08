@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chương 2 - Kỷ niệm sinh nhật Bác</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/trang2.css"/>
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <main class="container">
+    <div class="chapter-nav">
+      <div class="chapter">Chương 1<br><span>Sự nghiệp vĩ đại của Bác</span></div>
+      <div class="chapter current">Chương 2<br><span>Các hoạt động kỷ niệm ngày sinh của Bác qua các năm</span></div>
+      <div class="chapter">Chương 3<br><span>Các hoạt động dự kiến tổ chức năm nay</span></div>
+      <div class="chapter">Chương 4<br><span>Tiếp bước Người - Hướng đến tương lai</span></div>
+    </div>  
+
+    <h2 class="section-heading">
+      CÁC HOẠT ĐỘNG KỶ NIỆM NGÀY SINH CỦA BÁC<br>(19/05/1890 - 19/05/2025)
+    </h2>
+
+    <div class="year-selector">
+      <label><input type="radio" name="year" value="2022"/><span>Năm 2022</span></label>
+      <label><input type="radio" name="year" value="2023"/><span>Năm 2023</span></label>
+      <label><input type="radio" name="year" value="2024"/><span>Năm 2024</span></label>
+    </div>
+
+    <section id="content-2022" class="year-content">
+      <div class="wrapper">
+        <div class="card">
+          <h4 class="card-title">Lễ hội làng Sen</h4>
+          <img src="images/trang2/2022_1.webp" alt="Lễ hội làng Sen"/>
+          <button class="btn" onclick="openModal('modalLangSen')">Xem chi tiết</button>
+        </div>
+        
+        <!-- Thẻ card 2 -->
+        <div class="card">
+          <h4 class="card-title">Hành trình theo chân Bác</h4>
+          <img src="images/trang2/2022_2.webp" alt="Hành trình theo chân Bác"/>
+          <button class="btn" onclick="openModal('modalTheoChanBac')">Xem chi tiết</button>
+        </div>
+  
+         <!-- Thẻ card 3 -->
+         <div class="card">
+          <h4 class="card-title">Đứng lên và Cất tiếng </h4>
+          <img src="images/trang2/2022_3.webp" alt="Đứng lên và Cất tiếng "/>
+          <button class="btn" onclick="openModal('modalDungLen')">Xem chi tiết</button>
+        </div>
+  
+         <!-- Thẻ card 4 -->
+         <div class="card">
+          <h4 class="card-title">Bác Hồ một tình yêu bao la</h4>
+          <img src="images/trang2/2022_4.webp" alt="Bác Hồ một tình yêu bao la"/>
+          <button class="btn" onclick="openModal('modalTinhYeuBaoLa')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ card 5 -->
+        <div class="card">
+          <h4 class="card-title">Hồ Chí Minh đẹp nhất tên Người</h4>
+          <img src="images/trang2/2022_5.jpg" alt="Hồ Chí Minh đẹp nhất tên Người"/>
+          <button class="btn" onclick="openModal('modalDepNhatTenNguoi')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ card 6 -->
+        <div class="card">
+          <h4 class="card-title">Những tấm gương bình dị mà cao quý</h4>
+          <img src="images/trang2/2022_6.jpg" alt="Những tấm gương bình dị mà cao quý"/>
+          <button class="btn" onclick="openModal('modalTamGuong')">Xem chi tiết</button>
+        </div>
+
+
+      </div>
+
+      
+    </section>
+
+    <section id="content-2023" class="year-content">
+      <div class="wrapper">
+        <div class="card">
+          <h4 class="card-title">Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh</h4>
+          <img src="images/trang2/2023_1.webp" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalDoanDaiBieu')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Tết trồng cây đời đời nhớ ơn Bác Hồ</h4>
+          <img src="images/trang2/2023_4.jpg" alt="Trồng cây"/>
+          <button class="btn" onclick="openModal('modalTrongCay')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Chương trình nghệ thuật với chủ đề " Vang mãi bài ca Hồ Chí Minh"</h4>
+          <img src="images/trang2/2023_5.jpg" alt="Trồng cây"/>
+          <button class="btn" onclick="openModal('modalVangMai')">Xem chi tiết</button>
+        </div>
+      </div>
+     
+
+    </section>
+
+    <section id="content-2024" class="year-content">
+      <div class="wrapper">
+        <div class="card">
+          <h4 class="card-title">Chương trình nghệ thuật "Sáng mãi tên Người"</h4>
+          <img src="images/trang2/2023_8.jpg" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalNgheThuat')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Chương trình “Về nguồn” nhân kỷ niệm 134 năm Ngày sinh Chủ tịch Hồ Chí Minh</h4>
+          <img src="images/trang2/2023_10.jpg" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalVeNguon')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Khai mạc Liên hoan Tiếng hát làng Sen năm 2024</h4>
+          <img src="images/trang2/2024_3.jpg" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalKhaiMac')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Hà Nội rực rỡ cờ hoa kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh</h4>
+          <img src="images/trang2/2024_4.jpg" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalHaNoi134')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+          <h4 class="card-title">Dâng hương kỷ niệm ngày sinh của Bác</h4>
+          <img src="images/trang2/2024_7.jpg" alt="Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh"/>
+          <button class="btn" onclick="openModal('modalDangHuong')">Xem chi tiết</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modalLangSen" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Lễ hội làng Sen</h2>
+      <img src="images/trang2/2022_1.webp" alt="Lễ hội làng Sen" class="modal-image"/>
+      <div class="modal-text">
+        <p>Nhân dịp kỷ niệm 132 năm Ngày sinh Chủ tịch Hồ Chí Minh, Bộ Văn hóa, Thể thao và Du lịch phối hợp với UBND tỉnh Nghệ An đã tổ chức khai mạc Lễ hội làng Sen 2022 – Liên hoạn Tuồng và Dân ca kịch toàn quốc vào tối 17/5.</p>
+        <p>Đây cũng là dịp để toàn Đảng, toàn dân, toàn quân ta nhận thức cụ thể hơn trách nhiệm của mình trong việc phát huy truyền thống yêu nước, đạo lý uống nước nhớ nguồn, củng cố và xây dựng khối đại đoàn kết toàn dân tộc, vì sự nghiệp dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh.</p>
+        <p>Lễ hội Làng Sen năm 2022 diễn ra từ ngày 14-28/5 với nhiều hoạt động đặc sắc, phong phú tiêu biểu như: chương trình nghệ thuật "Người Mẹ Làng Sen", triển lãm ảnh nghệ thuật "Đời Sen", liên hoan Tuồng và Dân ca kịch toàn quốc năm 2022, trình diễn Áo dài Sen do Sở Văn hóa và Thể thao TP. Hồ Chí Minh thực hiện.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalTheoChanBac" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Hành trình theo chân Bác</h2>
+      <img src="images/trang2/2022_2.webp" alt="Hành trình theo chân Bác" class="modal-image"/>
+      <div class="modal-text">
+        <p>Ngày 18/5, Sở Thông tin và Truyền thông TP. Hồ Chí Minh đã phối hợp với các đơn vị tổ chức Khai mạc triển lãm ảnh chuyên đề kỷ niệm 132 năm Ngày sinh Chủ tịch Hồ Chí Minh và 111 năm ngày Bác Hồ ra đi tìm đường cứu nước (5/6/1911-5/6/2022) với chủ đề "Hành trình theo chân Bác".</p>
+        <p>Phần 1 của triển lãm với chủ đề "Tìm thấy con đường cứu nước và giải phóng dân tộc" với 2 nội dung: Quyết chí ra đi tìm đường cứu nước và Tìm thấy con đường giải phóng dân tộc. </p>
+        <p>Phần 2 của triển lãm có chủ đề "Xây dựng các nhân tố bảo đảm cho thắng lợi của sự nghiệp giải phóng dân tộc", bao gồm các nội dung: Xây dựng khối đại đoàn kết dân tộc, sáng lập và rèn luyện Đảng Cộng sản Việt Nam; Xây dựng lực lượng vũ trang nhân dân, lãnh đạo toàn dân Tổng khởi nghĩa Tháng Tám, sáng lập Nhà nước Việt Nam Dân chủ Cộng hòa.</p>
+        <p>Khu trưng bày chuyên đề "Hành trình theo chân Bác", người dân có thể tham quan, thưởng lãm các tác phẩm, tư liệu, hình ảnh khắc họa cuộc đời, sự nghiệp cách mạng của Người; về hành trình 30 năm đi tìm đường cứu nước của Chủ tịch Hồ Chí Minh. Chương trình còn có các hoạt động giao lưu, tọa đàm giới thiệu các tác phẩm về Bác, bản đồ Hành trình theo chân Bác và các hoạt động khác được tổ chức tại Đường sách TP. Hồ Chí Minh.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalDungLen" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Đứng lên và Cất tiếng </h2>
+      <img src="images/trang2/2022_3.webp" alt="Đứng lên và Cất tiếng " class="modal-image"/>
+      <div class="modal-text">
+        <p>Tại di tích Nhà tù Hỏa Lò (Hà Nội) tổ chức trưng bày "Đứng lên và Cất tiếng" là hoạt động hướng tới kỷ niệm 132 năm Ngày sinh của Chủ tịch Hồ Chí Minh và 97 năm ngày Báo chí cách mạng Việt Nam (21/6/1925 - 21/6/2022).</p>
+        <p>Trưng bày góp phần tôn vinh chặng đường hoạt động sôi nổi của một nhà báo vì nước - nhà báo Hồ Chí Minh; tôn vinh những đóng góp của báo chí cách mạng Việt Nam trong hai cuộc kháng chiến chống thực dân Pháp và đế quốc Mỹ.</p>
+        <p>Với 2 nội dung: "Tiếng nói dân tộc" và "Vì nước dấn thân, vì dân cất tiếng," trưng bày cũng là lời tri ân dành cho những nhà báo - chiến sĩ đã hy sinh xương máu, cống hiến quên mình cho sự nghiệp vẻ vang của nền báo chí cách mạng Việt Nam. Trong số đó, phần thứ nhất điểm lại một số dấu ấn lịch sử trên chặng đường 97 năm hình thành và phát triển của báo chí cách mạng Việt Nam kể từ khi Chủ tịch Hồ Chí Minh đặt nền móng đầu tiên.</p>
+        <p>Trưng bày "Đứng lên và cất tiếng" kéo dài đến hết ngày 31/12/2022 tại Di tích lịch sử Nhà tù Hỏa Lò.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalTinhYeuBaoLa" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Bác Hồ một tình yêu bao la</h2>
+      <img src="images/trang2/2022_4.webp" alt="Bác Hồ một tình yêu bao la" class="modal-image"/>
+      <div class="modal-text">
+        <p>Tối 18/5, chương trình nghệ thuật "Bác Hồ một tình yêu bao la" do Báo Văn hóa hợp các cơ quan liên quan tổ chức nhân kỷ niệm 132 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2022), được tường thuật trực tiếp trên Đài phát thanh truyền hình Hà Nội.</p>
+        <p>Với 2 phần "Nhớ mãi ơn Người", "Hồ Chí Minh đẹp nhất tên Người" được dàn dựng công phu, tâm huyết, chương trình đã đem đến khán giả những ca khúc quen thuộc ca ngợi Bác, thể hiện tình yêu quê hương, đất nước, tình cảm của người dân mọi vùng miền đối với Bác.</p>
+        <p>Các ca khúc được thể hiện có thể kể đến như, "Từ làng Sen", "Dấu chân phía trước", "Lời Bác dặn trước lúc đi xa", "Lời ca dâng Bác", "Dâng Người tiếng hát mùa xuân", "Đêm Trường Sơn nhớ Bác", "Bác cùng chúng cháu hành quân", "Bác Hồ sống mãi với Tây Nguyên", "Thăm bến Nhà Rồng", "Miền Nam nhớ mãi ơn Người", "Làng Chăm ơn Bác", "Tiếng hát giữa rừng Pác Bó"…</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalDepNhatTenNguoi" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Hồ Chí Minh đẹp nhất tên Người</h2>
+      <img src="images/trang2/2022_5.jpg" alt="Hồ Chí Minh đẹp nhất tên Người" class="modal-image"/>
+      <div class="modal-text">
+        <p>Kỷ niệm 132 năm Ngày sinh Chủ tịch Hồ Chí Minh, UBND tỉnh Tuyên Quang đã tổ chức chương trình nghệ thuật đặc biệt với chủ đề "Hồ Chí Minh đẹp nhất tên Người".</p>
+        <p>Chương trình nghệ thuật "Hồ Chí Minh đẹp nhất tên Người" nhằm thể hiện sự tri ân sâu sắc của cán bộ, chiến sĩ và nhân dân các dân tộc tỉnh Tuyên Quang đối với công lao trời biển và tình cảm đặc biệt của Bác dành cho chiến khu cách mạng. </p>
+        <p>Đây cũng là dịp khơi dậy niềm tự hào, tạo động lực mạnh mẽ để cán bộ, đảng viên và nhân dân các dân tộc trong tỉnh tiếp tục học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh, phấn đấu xây dựng tỉnh Tuyên Quang - Thủ đô Khu giải phóng, Thủ đô Kháng chiến sớm trở thành tỉnh phát triển khá, toàn diện và bền vững trong khu vực miền núi phía Bắc, để nhân dân có cuộc sống ngày càng ấm no, hạnh phúc như Bác hằng mong ước.</p>
+        <p>Chương trình nghệ thuật gồm 3 phân đoạn: "Tổ quốc", "Đất thiêng", "Tuyên Quang làm theo lời Bác", với sự tham gia của trên 100 nghệ sĩ, ca sĩ, diễn viên múa, nhạc công. Các khán giả đã được thưởng thức những tiết mục văn nghệ đặc sắc, khắc họa chân dung Chủ tịch Hồ Chí Minh với chiều dài lịch sử của đất nước kể từ khi Bác ra đi tìm đường cứu nước, về đến Tân Trào lãnh đạo Cách mạng tháng Tám năm 1945 và trở lại Tân Trào năm 1947; sự đổi mới và phát triển của Tuyên Quang hôm nay.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalTamGuong" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Những tấm gương bình dị mà cao quý</h2>
+      <img src="images/trang2/2022_6.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text">
+        <p>Hướng tới kỷ niệm 132 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2022), kỷ niệm 111 năm Ngày Chủ tịch Hồ Chí Minh ra đi tìm đường cứu nước (5/6/1911 - 05/6/2022) và thực hiện đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh, Bảo tàng Hồ Chí Minh phối hợp với Bảo tàng Tuổi trẻ Việt Nam tổ chức trưng bày triển lãm chuyên đề "Những tấm gương bình dị mà cao quý" và "Tuổi trẻ - Mùa xuân đất nước".</p>
+        <p>Nội dung các triển lãm cũng góp phần lan tỏa rộng rãi những tấm gương tiêu biểu, qua đó tuyên truyền cảm hứng, khơi dậy tiềm năng, sức sáng tạo cho toàn dân, đặc biệt là của thế hệ trẻ trong công cuộc xây dựng và bảo vệ tổ quốc hiện nay, tạo sự chuyển biến mạnh mẽ trong ý thức tu dưỡng, rèn luyện trong tư tưởng về đạo đức, phong cách Hồ Chí Minh.</p>
+        <p>Triển lãm "Những tấm gương bình dị mà cao quý" giới thiệu đến công chúng 132 tấm gương tiêu biểu, điển hình tiên tiến là 43 tập thể và 89 cá nhân đã được Ban Tuyên giáo các Tỉnh ủy, Thành ủy, Đảng ủy Khối các cơ quan Trung ương, Đảng ủy Khối Doanh nghiệp Trung ương, Tổng cục Chính trị (Bộ Quốc phòng), Cục Công tác Đảng và công tác chính trị (Bộ Công an) lựa chọn từ hơn 300 tấm gương học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh trong năm 2021 - 2022. Mỗi hình ảnh và bài viết là một câu chuyện cảm động về các tập thể và những con người bình dị đã vượt lên hoàn cảnh, số phận, dám nghĩ, dám làm, không ngừng cố gắng, hết lòng vì lợi ích của cộng đồng, vì sự nghiệp xây dựng và bảo vệ Tổ quốc.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalDoanDaiBieu" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Đoàn đại biểu thanh niên tiên tiến làm theo lời Bác vào Lăng viếng Chủ tịch Hồ Chí Minh</h2>
+      <p>Kỷ niệm 133 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2023), sáng 25/5, trong khuôn khổ Liên hoan Thanh niên tiên tiến làm theo lời Bác Khối các cơ quan Trung ương năm 2023, Đoàn đại biểu Thanh niên tiên tiến làm theo lời Bác của Khối đã đặt vòng hoa, vào Lăng viếng Chủ tịch Hồ Chí Minh.</p>
+      <img style="margin-top: 10px;" src="images/trang2/2023_1.webp" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Vòng hoa của Đoàn mang dòng chữ “Đời đời nhớ ơn Chủ tịch Hồ Chí Minh vĩ đại”.</p>
+      </div>
+      <img style="margin-top: 10px;" src="images/trang2/2023_2.webp" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Các đại biểu Liên hoan Thanh niên tiên tiến làm theo lời Bác Khối các cơ quan Trung ương năm 2023 nghiêm trang nghe lại lời dạy của Bác.</p>
+      </div>
+      <img style="margin-top: 10px;" src="images/trang2/2023_3.webp" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Đoàn đại biểu Liên hoan Thanh niên tiên tiến làm theo lời Bác Khối các cơ quan Trung ương năm 2023.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modalTrongCay" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">LỄ PHÁT ĐỘNG “TẾT TRỒNG CÂY ĐỜI ĐỜI NHỚ ƠN BÁC HỒ” NHÂN DỊP KỶ NIỆM 133 NĂM NGÀY SINH NHẬT BÁC 19/5/1890- 19/5/2023</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2023_4.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text">
+        <p>Nhân kỷ niệm 133 năm Ngày sinh Chủ tịch Hồ chí Minh, (19/5/1890-19/5/2023), ngày 19/5/2023, tại xã Ea Hu, UBND huyện Cư Kuin đã tổ chức Lễ phát động “Tết trồng cây đời đời nhớ ơn Bác Hồ” năm 2023.</p>
+        <p>Phát biểu tại Lễ phát động, đồng chí Lê Phú Hanh, Phó Chủ tịch UBND huyện nhấn mạnh, thực hiện lời dạy chủa chủ tịch hồ chí minh. Những năm qua UBND huyện luôn xác định việc trồng cây xanh là việc làm quan trọng gắn liền với quá trình phát triển toàn diện của huyện, trồng cây gây rừng không chỉ cho hôm nay mà cho cả mai sau… vì vậy, đề nghị các cấp ủy, chính quyền địa phương trong huyện cần thực hiện đồng bộ, hiệu quả công tác trồng cây xanh và bảo vệ rừng. Bình quân mỗi năm toàn huyện trồng mới gần 50.000 cây xanh phân tán, 45 ha rừng trồng các loại, nâng tổng diện tích đất rừng hiện có 1.553,8 ha, với độ che phủ rừng của huyện năm 2022 đạt 4,7%.</p>
+        <img style="margin-top: 10px;" src="images/trang2/2023_6.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+        <div class="text">
+          <p>Ông Lê Phú Hanh, Phó Chủ tịch UBND huyện phát biểu tại Lễ phát động.</p>
+        </div>
+        <p> Sau lễ phát động, các đại biểu cùng đoàn viên, thanh niên, hội viên nông dân và người dân trên địa bàn xã đã tổ chức trồng 400 cây sao đen, dầu, bằng lăng tại sân bóng đá thôn 1 và dọc tuyến đường chính từ trụ sở Đảng ủy – HĐND – UBND xã Ea Hu đến chợ An Bình. </p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="modalVangMai" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Chương trình nghệ thuật với chủ đề " Vang mãi bài ca Hồ Chí Minh"</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2023_5.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text">
+        <p>Tối 5/6/2023, Ban Tổ chức kỷ niệm các ngày Lễ lớn Thành phố Hồ Chí Minh tổ chức chương trình nghệ thuật với chủ đề " Vang mãi bài ca Hồ Chí Minh" kỷ niệm 133 năm Ngày sinh Chủ tịch Hồ Chí Minh và 112 năm Ngày Bác Hồ ra đi tìm đường cứu nước, tại Đường đi bộ Nguyễn Huệ (Quận1).</p>
+        <p> Đến dự có đồng chí Nguyễn Văn Nên, Ủy viên Bộ Chính trị, Bí thư Thành ủy; đồng chí Phan Nguyễn Như Khuê, Ủy viên Ban Thường vụ Thành ủy, Trưởng ban Tuyên giáo Thành ủy; đồng chí Nguyễn Phước Lộc, Ủy viên Ban Thường vụ Thành ủy, Trưởng Ban Tổ chức Thành ủy; đồng chí Dương Anh Đức, Thành ủy viên, Phó Chủ tịch Ủy ban nhân dân Thành phố; đồng chí Trần Thế Thuận, Thành ủy viên, Giám đốc Sở Văn hóa và Thể thao; đồng chí Phạm Minh Tuấn – Phó Chủ tịch Ủy ban Mặt trận Tổ quốc Việt Nam Thành phố Hồ Chí Minh…cùng các đại diện lãnh đạo các sở, ban, ngành, đoàn thể, chức sắc tôn giáo, nhân sĩ trí thức, đại biểu dân tộc, nhân dân thành phố đến tham dự.</p>
+        <p>Chương trình nghệ thuật gồm 3 phần: Bài ca chân lý; Dâng người ngàn hoa chiến công; Thành phố Hồ Chí Minh – Văn minh, hiện đại và nghĩa tình. Đã tái hiện hành trình bôn ba của Bác Hồ ở nước ngoài, cho đến khi trở về nước chiến đấu, đọc Bản Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalNgheThuat" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Chương trình nghệ thuật "Sáng mãi tên Người"</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2023_8.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text">
+        <p>Hòa trong không khí cả nước hướng về Ngày sinh nhật Bác, tại Đà Nẵng, các đơn vị, địa phương cũng đã tổ chức nhiều chương trình, hoạt động đặc sắc dâng lên Người, điển hình như chương trình nghệ thuật "Sáng mãi tên Người" do Nhà hát Trưng Vương Đà Nẵng tổ chức tại Công viên APEC tối 18-5 thu hút đông đảo người dân và khán giả yêu âm nhạc đến xem. Xuyên suốt chương trình là 12 tiết mục nghệ thuật được biên đạo, dàn dựng công phu, mang tính nghệ thuật cao; là những ca khúc nổi tiếng sống mãi trong lòng công chúng yêu âm nhạc nghệ thuật qua nhiều thế hệ như: "Hồ Chí Minh đẹp nhất tên người - Trần Kiết Tường"; "Lời Bác dặn trước lúc đi xa" (Trần Hoàn), "Bác Hồ một tình yêu bao la'' (Thuận Yến)…, do tập thể nghệ sĩ, diễn viên của Nhà hát Trưng Vương biểu diễn đã để lại nhiều cảm xúc sâu lắng trong lòng khán giả. Chương trình thể hiện tình cảm sâu sắc và lòng biết ơn thành kính nhất đối với Bác Hồ kính yêu - vị lãnh tụ thiên tài của dân tộc, danh nhân văn hóa thế giới, người thầy vĩ đại của cách mạng, Người đã dành cả cuộc đời để đấu tranh cho độc lập, tự do của Tổ quốc và niềm hạnh phúc của nhân dân Việt Nam.</p>
+      </div>
+      <img style="margin-top: 10px;" src="images/trang2/2023_9.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Thành đoàn Đà Nẵng tuyên dương Chi đoàn tiên tiến làm theo lời Bác năm 2024.</p>
+      </div>
+      <div style="margin-top: 10px;" class="modal-text">
+        <p>Dịp này, Thành đoàn Đà Nẵng cũng đã tổ chức Lễ tuyên dương 24 Chi đoàn tiên tiến, 19 thanh niên tiên tiến làm theo lời Bác năm 2024. Đây là những tập thể, cá nhân điển hình trong học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh; những cán bộ Đoàn, Hội, Đội tài năng, nhiệt huyết; những gương thanh niên vượt khó trong lập nghiệp, những thanh niên lực lượng vũ trang dũng cảm chiến đấu, hoàn thành xuất sắc nhiệm vụ; những tấm gương tiêu biểu trong hoạt động tình nguyện, tham gia xây dựng nông thôn mới... Trong đợt này, Tuổi trẻ Công an TP Đà Nẵng vinh dự có 2 Chi đoàn và 2 thanh niên tiêu biểu được tuyên dương…</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalVeNguon" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Chương trình “Về nguồn” nhân kỷ niệm 134 năm Ngày sinh Chủ tịch Hồ Chí Minh</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2023_10.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text">
+        <p>Hội Liên hiệp phụ nữ thành phố Thủ Đức (TP.HCM) đã tổ chức chuyến đi “Về nguồn”, thăm mộ cụ Nguyễn Sinh Sắc (thân phụ Chủ tịch Hồ Chí Minh) tại tỉnh Đồng Tháp.</p>
+        <p>Nhân dịp này, Hội Liên hiệp phụ nữ thành phố Thủ Đức đã tuyên dương 20 hội viên phụ nữ điển hình tiêu biểu học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh; đồng thời trao tặng 50 phần quà, tổng trị giá 15 triệu đồng cho những gia đình hội viên có hoàn cảnh khó khăn ở thành phố Cao Lãnh, Đồng Tháp.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalKhaiMac" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Khai mạc Liên hoan Tiếng hát làng Sen năm 2024</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2024_3.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="modal-text"> 
+        <p>Chiều 16/5, tại Trung tâm Nghệ thuật truyền thống tỉnh Nghệ An đã diễn ra lễ Khai mạc Liên hoan Tiếng hát làng Sen năm 2024. Đây là chương trình nghệ thuật do Sở Văn hóa và Thể thao tỉnh Nghệ An tổ chức nhằm Kỷ niệm 134 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 – 19/5/2024).</p>
+        <p>Liên hoan Tiếng hát làng Sen cấp tỉnh gồm 20 chương trình đặc sắc nhất với sự tham gia biểu diễn của 600 nghệ nhân, diễn viên ưu tú nhất trong phong trào nghệ thuật quần chúng của tỉnh Nghệ An tham gia biểu diễn. Các diễn viên đã dày công luyện tập, đầu tư cẩn thận và kỹ lưỡng, hứa hẹn mang đến nhiều tiết mục ca múa nhạc chất lượng cao.</p>
+        <p>Liên hoan Tiếng hát Làng Sen là hoạt động nằm trong chuỗi hoạt động của Lễ Hội Làng Sen 2024. Lễ hội còn có chương trình Quảng diễn đường phố với chủ đề “Quê hương mùa sen nở” diễn ra trên tuyến phố đi bộ thành phố Vinh với các màn trình diễn văn hóa, di sản văn hóa nghệ thuật đầy màu sắc; triển lãm ảnh “Nghệ An làm theo lời Bác” và “Hồ Chí Minh – Người là niềm tin tất thắng” tại Quảng trường Hồ Chí Minh….</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalHaNoi134" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Hà Nội rực rỡ cờ hoa kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh</h2>
+      <img style="margin-top: 10px;" src="images/trang2/2024_4.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Phố phường khu trung tâm Hà Nội được trang hoàng băng rôn, áp phích, cờ đỏ sao vàng kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2024)</p>
+      </div>
+      <img style="margin-top: 30px;" src="images/trang2/2024_5.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Không khí chào mừng 134 năm ngày sinh Chủ tịch Hồ Chí Minh xuất hiện khắp các đường phố thủ đô.</p>
+      </div>
+      <img style="margin-top: 30px;" src="images/trang2/2024_6.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+      <div class="text">
+        <p>Con ngõ nhỏ trên phố Nguyễn Tri Phương tràn ngập cờ đỏ sao vàng.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalDangHuong" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Dâng hương kỷ niệm ngày sinh của Bác</h2>
+      <div class="modal-text"> 
+        <p>Ngày 17/5, tại trụ sở Đại sứ quán Việt Nam ở Vương quốc Campuchia, Đảng bộ tại Campuchia trang trọng tổ chức lễ dâng hương kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh.</p>
+        <img style="margin-top: 10px;" src="images/trang2/2024_7.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+        <div class="text">
+          <p>Đại sứ quán Việt Nam ở Campuchia tổ chức lễ dâng hương kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh.</p>
+        </div>
+        <p>Chiều 16/5, tại Khu lưu niệm Chủ tịch Hồ Chí Minh ở làng Xiengvang, huyện Nongbok, tỉnh Khammouane, Trung Lào đã diễn ra lễ dâng hương kỷ niệm 134 năm ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890-19/5/2024) để tưởng nhớ công đức của Người đối với nhân dân và dân tộc hai nước Việt Nam – Lào.</p>
+        <img style="margin-top: 10px;" src="images/trang2/2024_8.jpg" alt="Những tấm gương bình dị mà cao quý" class="modal-image"/>
+        <div class="text">
+            <p>Anh hùng Cộng hòa Cuba Fernando González Llort - Chủ tịch ICAP, Phó Chánh án Tòa án Nhân dân tối cao Việt Nam Nguyễn Văn Tiến đang thăm chính thức Cuba, ông Lê Quang Long - Đại sứ Việt Nam cùng đông đảo người dân và học sinh địa phương tại lễ kỷ niệm 134 năm ngày sinh của Chủ tịch Hồ Chí Minh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-container right-align">
+    <a href="trang3.html"><button class="exploreBtn">Tiếp tục</button></a>
+  </div>
+  <!-- Scripts -->
+  <script>
+    fetch('components/header_1.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header-container').innerHTML = data);
+  
+    const radios = document.querySelectorAll('input[name="year"]');
+    const contents = document.querySelectorAll('.year-content');
+  
+    function showYear(year) {
+      contents.forEach(content => content.style.display = 'none');
+      document.getElementById(`content-${year}`).style.display = 'block';
+    }
+  
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => showYear(radio.value));
+    });
+  
+    // Mặc định hiển thị năm 2024
+    document.querySelector('input[value="2024"]').checked = true;
+    showYear("2024");
+  
+    // Sửa lại openModal & closeModal đúng theo ID được truyền
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+  
+    function closeModal() {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => modal.style.display = "none");
+    }
+  </script>
+</body>
+</html>

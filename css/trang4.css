@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background-color: #950006;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chapter-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFEB3B;
+  margin: 5px 0;
+}
+
+.text-section {
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
+}
+
+.text-section.show {
+  opacity: 1;
+}
+
+.text {
+  font-size: 1.4rem;
+  color: #F8FFBB;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.continue-btn {
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffeb3b;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.transition-wrapper {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #950006;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 10;
+}
+
+.transition-wrapper.show {
+  opacity: 1;
+}
+
+.transition-text {
+  font-size: 1.4rem;
+  color: #F8FFBB;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 640px;
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  border-radius: 10px;
+}
+
+#after-video-btn {
+  margin-top: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #ffeb3b;
+  color: black;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#after-video-btn.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.inspirational-text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  max-width: 800px;
+  text-align: justify;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.inspirational-text.show {
+  opacity: 1;
+}
+
+.quote-author {
+  text-align: right;
+  font-weight: 500;
+  margin-top: 10px;
+  font-style: italic;
+  color: #FFEB3B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  .text, .transition-text {
+    font-size: 16px;
+  }
+  .continue-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+  .text, .transition-text {
+    font-size: 14px;
+  }
+  .media {
+    max-height: 200px;
+  }
+}

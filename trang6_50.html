@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang 6_50</title>
+  <link rel="stylesheet" href="css/trang6_50.css" />
+</head>
+<body>
+  <!-- Tự động phát âm thanh -->
+  <audio id="bgAudio" src="images/trang6_50/nhac.m4a" autoplay loop hidden></audio>
+
+  <!-- Phần hiển thị hình ảnh -->
+  <div class="gallery" id="gallery">
+    <img src="images/trang6_50/1.webp" class="gallery-img" />
+    <img src="images/trang6_50/2.webp" class="gallery-img" />
+    <img src="images/trang6_50/3.webp" class="gallery-img" />
+    <img src="images/trang6_50/4.webp" class="gallery-img" />
+    <img src="images/trang6_50/5.webp" class="gallery-img" />
+    <img src="images/trang6_50/6.webp" class="gallery-img" />
+    <img src="images/trang6_50/7.webp" class="gallery-img" />
+    <img src="images/trang6_50/8.jpg"  class="gallery-img" />
+    <img src="images/trang6_50/9.jpg"  class="gallery-img" />
+    <img src="images/trang6_50/10.webp" class="gallery-img" />
+  </div>
+
+  <!-- Phần hiển thị thông điệp + nút kết thúc gộp chung -->
+  <div class="gratitude-container" id="gratitudeContainer">
+    <div class="gratitude-message" id="message">
+      <p>
+        Thế hệ trẻ chúng con luôn biết ơn và trân trọng những gì các ông, bà, cô, bác đã phải hi sinh trong quá khứ. 
+        Chúng con biết rằng để có được một đất nước tự do, độc lập những thế hệ trước đã trải qua muôn ngàn khó khăn, gian nguy. 
+        Chúng con sẽ luôn ghi nhớ, biết ơn và cố gắng sống thật tốt để xứng đáng với những gì mà thế hệ đi trước đã trao lại.
+      </p>
+    </div>
+
+    <!-- Nút kết thúc nằm ngay bên dưới thông điệp -->
+    <div id="endButtonContainer">
+      <button id="endButton">Kết thúc hành trình!</button>
+    </div>
+  </div>
+
+  <script>
+    // Hiệu ứng hiện ảnh lần lượt
+    const images = document.querySelectorAll('.gallery-img');
+    images.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add('show');
+      }, index * 1000); // 1s mỗi ảnh
+    });
+
+    // Phát nhạc (bắt lỗi autoplay)
+    window.addEventListener("load", () => {
+      const audio = document.getElementById("bgAudio");
+      audio.play().catch(e => console.log("Tự động phát bị chặn:", e));
+    });
+
+    // Sau khi ảnh hiển thị xong + 5s thì hiện thông điệp
+    const totalDelay = images.length * 1000 + 5000;
+    setTimeout(() => {
+      document.getElementById("gallery").classList.add("blur");
+      const container = document.getElementById("gratitudeContainer");
+      container.classList.add("fade-in");
+
+      // Sau 5s kể từ khi hiện thông điệp => hiện nút kết thúc
+      setTimeout(() => {
+        document.getElementById("endButtonContainer").style.opacity = 1; // Hiển thị nút kết thúc
+      }, 5000);
+    }, totalDelay);
+
+    // Sự kiện click cho nút kết thúc
+    document.getElementById("endButton").addEventListener("click", () => {
+      // Chuyển hướng đến trang start.html
+      window.location.href = "start.html";
+    });
+  </script>
+</body>
+</html>

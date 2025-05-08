@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang 4_50</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/trang4_50.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+    <div class="body">
+        <div class="chapter-nav">
+        <div class="chapter">Chương 1<br><span>Dấu ấn lịch sử 30/04/1975</span></div>
+        <div class="chapter">Chương 2<br><span>Lễ kỷ niệm 50 năm 30/04/2025</span></div>
+        <div class="chapter">Chương 3<br><span>Chuỗi hoạt động chào mừng</span></div>
+        <div class="chapter current">Chương 4<br><span>Cảm nhận và hồi ức</span></div>
+        </div>
+    </div>
+
+    <div class="section-heading">
+       <h2>Phỏng vấn cảm xúc khi tham dự lễ diễu binh 30/4</h2>
+    </div>
+    
+    
+    <div class="video-gallery">
+      <div class="video-item" onclick="openVideo('images/trang4_50/pvan.mp4')">
+        <img src="images/trang4_50/thumb1.png" alt="Phỏng vấn 1">
+        <p>Cảm xúc của các bác cựu chiến binh</p>
+      </div>
+      <div class="video-item" onclick="openVideo('images/trang4_50/pvan2.mp4')">
+        <img src="images/trang4_50/thumb2.png" alt="Phỏng vấn 2">
+        <p>Cảm xúc của các em thiếu nhi</p>
+      </div>
+      <div class="video-item" onclick="openVideo('images/trang4_50/pvan3.mp4')">
+        <img src="images/trang4_50/thumb3.png" alt="Phỏng vấn 3">
+        <p>Cảm xúc của đạo diễn Hoàng Nhật Nam</p>
+      </div>
+      <div class="video-item" onclick="openVideo('images/trang4_50/pvan4.mp4')">
+        <img src="images/trang4_50/thumb4.png" alt="Phỏng vấn 3">
+        <p>Cảm xúc của các thành viên trong Schannel</p>
+      </div>
+    </div>
+
+    <div class="section-heading">
+      <h2>Hình ảnh về thành phố Hồ Chí Minh trong lễ kỷ niệm 50 năm</h2>
+    </div>
+
+  <div class="leaders-wrapper2">
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_1.jpg" alt="Sài Gòn 1" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_2.jpg" alt="Sài Gòn 2" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_3.jpg" alt="Sài Gòn 3" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_4.jpg" alt="Sài Gòn 4" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_5.jpg" alt="Sài Gòn 5" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_6.jpg" alt="Sài Gòn 6" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_7.jpg" alt="Sài Gòn 7" onclick="openLightbox(this)">
+    </div>
+    <div class="leader-container2">
+        <img class="leader-image2" src="images/trang4_50/sg_8.jpg" alt="Sài Gòn 8" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+  <div class="btn-container right-align">
+    <a href="trang5_50.html"><button class="exploreBtn">Tiếp tục</button></a>
+  </div>
+
+    <!-- Lightbox cho ảnh -->
+    <div id="lightbox" class="img-lightbox">
+      <img id="lightbox-img" src="" alt="Phóng to">
+      <span id="lightbox-close" class="close-btn">✖</span>
+    </div>
+    
+    <!-- Lightbox video player -->
+    <div id="videoLightbox" class="lightbox-video">
+      <video id="videoPlayer" controls autoplay></video>
+      <button class="close-btn" onclick="closeVideo()">✖</button>
+    </div>
+
+  <script>
+    fetch('components/header_50.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+  </script>
+
+  <script>
+    // Declare lightbox and related variables only once
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    // Phóng to ảnh khi click vào ảnh trong phần media2
+    const mediaImages = document.querySelectorAll('.media2');
+    mediaImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('show');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Phóng to ảnh khi click vào ảnh trong phần leader-image2
+    const leaderImages = document.querySelectorAll('.leader-image2');
+    leaderImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('show');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Tắt lightbox khi click vào nút đóng
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+
+    // Tắt lightbox khi click ra ngoài ảnh
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove('show');
+      }
+    });
+  </script>
+
+<script>
+  function openVideo(src) {
+    const player = document.getElementById('videoPlayer');
+    const lightbox = document.getElementById('videoLightbox');
+    player.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeVideo() {
+    const player = document.getElementById('videoPlayer');
+    const lightbox = document.getElementById('videoLightbox');
+    player.pause();
+    player.currentTime = 0;
+    lightbox.style.display = 'none';
+  }
+</script>
+
+<script>
+  function openLightbox(imgElement) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imgElement.src;
+    lightbox.style.display = 'flex';
+  }
+
+  document.getElementById('lightbox-close').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox') {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

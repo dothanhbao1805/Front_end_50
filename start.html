@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang mở đầu - Dấu ấn 50 năm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/start.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="images/poster.png" alt="Bác Hồ và bản đồ" id="poster-left" />
+    </div>
+
+    <div class="right">
+        <div class="overlay"></div>
+        
+        <div class="image-grid">
+          <img src="images/11.jpg" class="image" />
+          <img src="images/7.jpg" class="image" />
+          <img src="images/6.jpg" class="image" />
+          <img src="images/10.jpg" class="image" />
+          <img src="images/8.jpg" class="image" />
+          <img src="images/4.jpg" class="image" />
+          <img src="images/trang2/2023_5.jpg" class="image" />
+          <img src="images/trang3_50/3d_2.jpg" class="image" />
+          <img src="images/trang2_50/si_quan_luc_quan.webp" class="image" />
+        </div>
+      
+        <div class="right-content">
+            <h1>DẤU ẤN 50 NĂM THỐNG NHẤT ĐẤT NƯỚC</h1>
+            <h1>VÀ</h1>
+            <h1>
+              KỶ NIỆM 135 NĂM NGÀY SINH
+              <br>CHỦ TỊCH HỒ CHÍ MINH<br>
+              (19/5/1890 - 19/5/2025)
+            </h1>
+            <a href="choose.html"><button id="exploreBtn">Khám phá nào!</button></a>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      const overlay = document.querySelector('.overlay');
+      const rightContent = document.querySelector('.right-content');
+      const images = document.querySelectorAll('.image');  // Lấy tất cả các ảnh
+      const container = document.querySelector('.container');
+
+      container.style.opacity = 1;
+
+      // Ẩn tất cả ảnh ban đầu
+      images.forEach((img) => {
+        img.style.opacity = 0;
+      });
+
+      // Hiển thị ảnh lần lượt
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.style.transition = 'opacity 1s ease';  // Thêm hiệu ứng cho ảnh
+          img.style.opacity = 1;  // Hiển thị ảnh với hiệu ứng fade-in
+        }, index * 1000);  // Thêm độ trễ cho từng ảnh (1000ms cho mỗi ảnh)
+      });
+
+      // Sau khi tất cả ảnh đã load, làm mờ nền và hiện chữ
+      setTimeout(() => {
+        overlay.style.opacity = 0.4;    // Làm mờ ảnh nền
+        rightContent.style.opacity = 1; // Hiện chữ
+      }, images.length * 1000);  // Thời gian sau khi tất cả ảnh đã load
+    };
+  </script>
+
+</body>
+</html>
